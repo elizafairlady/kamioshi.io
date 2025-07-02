@@ -2,8 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0;url=https://matrix.kamioshi.io">
     <title>Redirecting...</title>
+    <script>
+      const path = window.location.pathname;
+      if (path.startsWith('/.well-known/matrix/')) {
+        window.location.replace('https://matrix.kamioshi.io' + path);
+      } else {
+        window.location.replace('https://cinny.kamioshi.io');
+      }
+    </script>
   </head>
   <body>
     <p>Redirecting to <a href="https://matrix.kamioshi.io">the matrix client</a>...</p>
